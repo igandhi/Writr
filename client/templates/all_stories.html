@@ -1,0 +1,34 @@
+<template name="allStories">
+	{{#contentFor "headerButtonLeft"}}
+		<button class="button button-clear pull-left" data-ion-menu-toggle="left">
+			{{> ionIcon icon="navicon-round"}}
+		</button>
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+ 		<h1 class="title">All Stories</h1>
+	{{/contentFor}}
+ 	
+	{{#contentFor "headerButtonRight"}}
+		<button class="button button-clear" data-ion-popover="_storyPopover">
+			{{> ionIcon icon='more' }}
+		</button>
+	{{/contentFor}}
+
+	{{#ionView}}
+		{{#ionContent}}
+			{{#ionList}}							  
+				{{#each stories}}
+					{{#ionItem class="item-text-wrap" path="storyPage" iconRight=true iconLeft=true }}
+						{{> voteButton}}
+						<h2>{{title}}</h2>
+						<p>{{summary}}</p>
+						<p>Authored by {{username}} {{dateCreatedFromNow}}</p>
+
+				    	{{> ionIcon icon="compose" class="calm"}}
+					{{/ionItem}}
+				{{/each}}		
+			{{/ionList}}
+		{{/ionContent}}
+	{{/ionView}}
+</template>

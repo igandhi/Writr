@@ -1,0 +1,32 @@
+<template name="myStories">
+	{{#contentFor "headerButtonLeft"}}
+		{{> ionNavBackButton text=false}}
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+ 		<h1 class="title">My Stories</h1>
+	{{/contentFor}}
+ 	
+	{{#contentFor "headerButtonRight"}}
+		<button class="button button-clear" data-ion-popover="_storyPopover">
+			{{> ionIcon icon='more' }}
+		</button>
+	{{/contentFor}}
+
+	{{#ionView}}
+		{{#ionContent}}
+			{{#ionList}}
+				{{#each stories}}
+					{{#ionItem class="item-text-wrap" path="storyPage" iconRight=true}}
+						<span class="badge badge-dark"> {{votes}} Votes </span>
+						<h2>{{title}}</h2>
+						<p>{{summary}}</p>
+						<p>Author: {{username}}</p>
+						<p>Created {{dateCreatedFromNow}}</p>
+						{{> ionIcon icon="ios-arrow-forward" class="calm"}}
+					{{/ionItem}}
+				{{/each}}		
+			{{/ionList}}
+		{{/ionContent}}
+	{{/ionView}}
+</template>

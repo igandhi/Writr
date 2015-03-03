@@ -1,0 +1,28 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+ongoworks:security
+meteor-platform
+sacha:spin
+iron:router
+accounts-password
+fourseven:scss@=1.0.0
+meteoric:ionic-sass@=0.1.7
+meteoric:ionicons-sass@=0.1.5
+meteoric:ionic@=0.1.9
+useraccounts:ionic
+accounts-google
+service-configuration
+accounts-twitter
+meteoric:autoform-ionic
+aldeed:autoform
+aldeed:collection2
+raix:handlebar-helpers
+dburles:collection-helpers
+reywood:publish-composite
+bengott:avatar
+insecure
+momentjs:moment

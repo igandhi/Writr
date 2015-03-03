@@ -1,0 +1,41 @@
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+
+.commonModal .button-positive
+{
+background-color: #3fb396 !important;
+border: 0px;
+}
+
+.commonModal .bar-stable
+{
+background-color: #3fb396 !important;
+
+}
+
+.bar.bar-stable {
+background-color: #3fb396 !important;
+background-image: linear-gradient(0deg, #3fb396, #3fb396 50%, transparent 50%) !important;
+color: white !important;
+}
+
+.bar.bar-header {
+color: white !important;
+}
+
+.bar.bar-stable .title
+{
+color : white !important;
+}
+
+.commonModal .button.button-icon
+{
+color: white !important;
+
+}
+.commonModal h2
+{
+color: white !important;
+
+}

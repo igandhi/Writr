@@ -1,0 +1,30 @@
+<template name="allUsers">
+	{{#contentFor "headerButtonLeft"}}
+		{{> ionNavBackButton text=false}}
+	{{/contentFor}}
+	
+	{{#contentFor "headerTitle"}}
+		<h1 class="title">All Authors</h1>
+	{{/contentFor}}
+	
+	{{#ionView}}
+		{{#ionContent}}
+			{{#ionList}}
+				{{#each users}}
+					{{#ionItem path="userProfile" iconRight=true class="itemPadding0Only"}}
+						<div class="row">
+							<div class="col">
+								{{> avatar user=this shape='circle'}}
+							</div>
+							<div class="col col-75">
+								<h3>{{name this}}</h3>
+								<p>Joined {{dateJoined}}</p>
+							</div>
+						</div>
+						{{> ionIcon icon="ios-arrow-forward" class="calm"}}
+					{{/ionItem}}
+				{{/each}}
+			{{/ionList}}
+		{{/ionContent}}
+	{{/ionView}}
+</template>

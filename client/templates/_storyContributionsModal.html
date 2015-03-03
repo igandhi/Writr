@@ -1,0 +1,12 @@
+<template name="_storyContributionsModal">
+	{{#ionModal title="Contributions"}}
+	  	{{#ionList}}
+			{{#each addendums}}
+				{{#ionItem class="item-text-wrap"}}
+					<strong>{{username}}:</strong>
+					{{text}} 
+				{{/ionItem}}
+			{{/each}}
+		{{/ionList}}
+	{{/ionModal}}
+</template>

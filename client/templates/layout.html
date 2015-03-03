@@ -1,0 +1,60 @@
+<template name="layout">
+	{{#ionBody}}
+		{{#ionSideMenuContainer side="left"}}
+			{{#ionSideMenus}}
+				{{#ionSideMenu}}
+					<div class="bar bar-header bar-dark">
+						<p class="title authorFont">Writr</p>
+					</div>
+					<div class="content has-header menuBackgroundColor">
+							{{#if currentUser}}
+							{{#ionItem class="itemProfile"}}
+									<div>
+										<a href="{{pathFor 'userProfile' _id=currentUser._id}}" class="button button-light button-clear button-full user-avatar" data-ion-menu-close>
+											{{> avatar user=currentUser shape='circle'}}
+											{{name currentUser}}
+										</a>
+        							</div>
+        				     {{/ionItem}}
+
+								{{else}}
+								{{#ionItem class="itemSignIn"}}
+									<button class="button button-clear button-light button-full noBorder" data-ion-modal="_loginModal" data-ion-menu-close>Sign In</button>
+								{{/ionItem}}
+
+								{{/if}}
+							{{#ionItem class="itemPadding0"}}
+								    <a href="{{pathFor 'allStories'}}" class="button button-clear button-light button-full" data-ion-menu-close>All Stories</a>
+							{{/ionItem}}
+							{{#if currentUser}}
+							{{#ionItem class="itemPadding0"}}
+										<a href="{{pathFor 'myStories'}}" class="button button-clear button-light button-full" data-ion-menu-close>My Stories</a>
+							{{/ionItem}}
+							{{/if}}
+
+							{{#ionItem class="itemPadding0"}}
+								    <a href="{{pathFor 'allUsers'}}" class="button button-clear button-light button-full" data-ion-menu-close>All Authors</a>
+							{{/ionItem}}
+						
+							{{#ionItem class="itemPadding0"}}
+								    <a href="{{pathFor 'aboutUs'}}" class="button button-clear button-light button-full" data-ion-menu-close>About Us</a>
+							{{/ionItem}}
+							{{#if currentUser}}
+							{{#ionItem class="itemLogout"}}
+								    <button class="button button-clear button-light button-full" data-action="logout" data-ion-menu-close>Log Out</button>
+							{{/ionItem}}
+							{{/if}}
+					</div>
+				{{/ionSideMenu}}
+			{{/ionSideMenus}}
+			{{#ionSideMenuContent}}
+				{{> ionNavBar class="bar-calm"}}
+				{{#ionNavView}}
+					{{> yield}}
+				{{/ionNavView}}
+			{{/ionSideMenuContent}}
+		{{/ionSideMenuContainer}}
+
+	{{/ionBody}}
+
+</template>

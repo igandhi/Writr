@@ -1,0 +1,7 @@
+<template name="_newStoryModal">
+	{{#ionModal title="New Story"}}
+	<div class="commonModal">
+		{{> quickForm id="_newStoryModal" schema=storySchema type="method" meteormethod="addStory" fields="title, summary" }} 
+	</div>
+	{{/ionModal}}
+</template>

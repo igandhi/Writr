@@ -1,0 +1,22 @@
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+
+a:-webkit-any-link,
+{
+color: -webkit-link;
+text-decoration: none !important;
+cursor: auto;
+background-color:#f8f8f8 ;
+color: black;
+/* border-radius: 0px; */
+
+}
+
+
+.item-divider
+{
+background-color: rgb(81,81,81) !important; 
+color: white !important;
+
+}

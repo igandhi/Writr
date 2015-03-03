@@ -1,0 +1,101 @@
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+
+button.at-social-btn#at-twitter {
+background: #135095 !important;
+}
+
+button.at-social-btn#at-google {
+background: #9d2b12 !important;
+}
+
+.sign-in-modal .button
+{
+
+font-size: 18px;
+}
+
+.sign-in-modal .input
+{
+border: 5px !important;
+}
+
+.sign-in-modal .item-divider
+{
+background-color: white !important;
+color: black !important;
+
+}
+
+.sign-in-modal .title
+{
+color: white !important;
+font-size: 1px !important;
+}
+
+.sign-in-modal .list .item
+{
+border: 0px;
+}
+
+
+.sign-in-modal .button-positive
+{
+background-color: #3fb396 !important;
+border: 0px !important;
+}
+
+.sign-in-modal 
+{
+/* background-color: #000000; */
+padding : 0px;
+}
+
+.sign-in-modal .input-label
+{
+font-size: 0px !important;
+}
+
+::-webkit-input-placeholder {
+   color: grey !important;
+       font-weight: bold !important;
+
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: grey !important;  
+    font-weight: bold !important;
+   
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: grey !important ; 
+       font-weight: bold !important;
+
+}
+
+:-ms-input-placeholder {  
+   color: grey !important;  
+       font-weight: bold !important;
+
+}
+
+
+.sign-in-modal .item
+{
+padding: 0px !important;
+
+}
+
+
+.sign-in-modal .card .item.item-input input, .list-inset .item.item-input input, .padding > .list .item.item-input input, .padding-horizontal > .list .item.item-input input {
+  
+    padding: 15px ;
+    background: #f7f7f7 !important;
+    border: 10px !important;
+}
+
+
+
+

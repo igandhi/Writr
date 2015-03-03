@@ -1,0 +1,44 @@
+<template name="userProfile">
+	{{#contentFor "headerButtonLeft"}}
+		{{> ionNavBackButton text=false}}
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+		<h1 class="title">{{name user}}'s Profile</h1>
+	{{/contentFor}}
+	
+	{{#ionView}}
+		{{#ionContent}}
+			{{> _profileHeader}}
+			<div class="card">
+				{{#ionItem class="item-divider"}}
+					<strong>Stories</strong>
+				{{/ionItem}}
+				{{#each userStories user}}
+					{{#ionItem path="storyPage" class="item-text-wrap" iconRight=true}}
+						{{title}}
+						{{> ionIcon icon="ios-arrow-forward" class="calm"}}
+					{{/ionItem}}
+				{{/each}}
+			</div>
+			
+			
+			<div class="card">
+				{{#ionItem class="item-divider"}}
+					<strong>Contributions</strong>
+				{{/ionItem}}
+				{{#each userAddendums}}
+					{{#ionItem class="item-text-wrap"}}
+						{{#with story}}
+							<a class="button button-small button-full button-stable" href="{{pathFor 'storyPage'}}"> 
+							<strong>Edited {{title}}</strong> 
+							{{> ionIcon icon="ios-arrow-forward" class="calm"}}</a>
+						{{/with}}
+						<p class="userProfileFont"><strong> Text Added: </strong>{{text}} </p>
+						<p><strong>{{dateLastEdited}}</strong></p>
+					{{/ionItem}}
+				{{/each}}
+			</div>
+		{{/ionContent}}
+	{{/ionView}}
+</template>

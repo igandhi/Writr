@@ -1,0 +1,71 @@
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+
+.itemPadding0
+{
+padding: 0px 0px !important;
+background-color:#898989 !important;
+color: white !important;
+border-bottom-color: black !important;
+border-top-color: black !important;
+
+}
+
+.itemPadding0Only
+{
+padding: 0px 0px !important;
+}
+
+
+.itemSignIn
+{
+padding: 0px 0px !important;
+background-color:#83A59D !important;
+color: white !important;
+border-bottom-color: black !important;
+border-top-color: black !important;
+
+}
+
+.itemLogout
+{
+padding: 0px 0px !important;
+background-color:#9E776E  !important;
+color: white !important;
+border-bottom-color: black !important;
+border-top-color: black !important;
+
+}
+
+.itemProfile
+{
+background-color:#83A59D !important;
+color: white !important;
+}
+
+
+.profileLink
+{
+	background:#424242 !important;
+	color: white !important;
+	padding:0px 10px;
+	border: 0px;
+	border-radius: 50px !important;
+}
+
+.view 
+{	
+background:#b1b1b1 !important;
+}
+
+
+.noBorder
+{
+border: 0px !important;
+}
+
+.button.button-light.button-clear 
+{
+color: white !important;
+}

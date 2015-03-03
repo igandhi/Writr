@@ -1,0 +1,47 @@
+<template name="aboutUs">
+	{{#contentFor "headerButtonLeft"}}
+		{{> ionNavBackButton text=false}}
+	{{/contentFor}}
+		
+	{{#contentFor "headerTitle"}}
+	 	<h1 class="title authorFont">Writr</h1>
+	{{/contentFor}}
+
+
+	{{#ionView}}
+		{{#ionContent}}
+			<div class="card">
+				{{#ionItem class="item-divider"}}
+					<strong>About Us</strong>
+				{{/ionItem}}
+					
+				{{#ionItem class="item-text-wrap"}}
+					<p>Authr was created as means to promote collaborative writing and thinking. The app is completely free to use and is being actively developed with iOS version in the works!</p>
+				{{/ionItem}}
+			</div>
+			
+			<div class="card">	
+				{{#ionItem class="item-divider"}}
+					<strong>How to use</strong>
+				{{/ionItem}} 
+				
+				{{#ionItem class="item-text-wrap"}}
+					<p>It is extremely simple to get started - Just login, create a new story and start writing! Alternatively you can join any active story and start contributing. The only catch - you have to contribute atleast one sentence at a time. We enforce this by having each new entry end with a period "."</p>
+				{{/ionItem}}   
+			</div>
+				  
+			<div class="card">               
+				{{#ionItem class="item-divider"}}
+					<strong>Contact Us</strong>
+				{{/ionItem}}
+
+				{{#ionItem class="item-text-wrap"}}
+					<p>We love email! Feel free to reach out to us with questions, comments or feedback. contact@writr.me</p>
+				{{/ionItem}}
+
+				     
+			</div>
+			
+		{{/ionContent}}
+	{{/ionView}}
+</template>

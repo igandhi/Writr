@@ -1,0 +1,84 @@
+<template name="storyPage">
+	{{#contentFor "headerButtonLeft"}}
+		{{> ionNavBackButton text=false}}
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+		<h1 class="title title-center">{{#with story}}{{title}}{{/with}}</h1>
+	{{/contentFor}}
+		
+	{{#contentFor "headerButtonRight"}}
+		<button class="button button-clear" data-ion-modal="_storyContributionsModal">
+		{{> ionIcon icon='ios-list' }}
+		</button>
+	{{/contentFor}}
+
+	{{#ionView}}
+		{{#ionContent class="padding"}}
+			{{#with story}}
+				<div class="list card">
+					{{#ionItem}}
+						{{#with author}}
+							Author
+							{{#if username}}
+								<a class="profileLink" href="{{pathFor 'userProfile'}}">		{{username}}
+								{{> ionIcon icon="arrow-right-b" class="light"}}
+								</a>
+							{{else}}
+								<a class="profileLink" href="{{pathFor 'userProfile'}}">									{{profile.name}}			
+								{{> ionIcon icon="arrow-right-b" class="light"}}	
+								</a><br>
+							{{/if}}
+							
+						{{/with}}
+						<p> </p>
+						<p> {{votes}} votes </p>
+						<p>Created at {{dateCreated}}</p>
+						{{#if text}}
+							<p>Last edited by {{lastEditedBy}} {{lastEditedTime}}</p>
+						{{/if}}
+					{{/ionItem}}
+				</div>
+				<div class="list card padding">
+					{{#if text}}
+						<p class="storyFont">{{text}}</p>
+					{{else}}
+						<p class="storyPlaceholder">Be the first to add to this story!</p>
+					{{/if}}
+				</div>
+			{{/with}}
+		{{/ionContent}}
+		{{#ionFooterBar class="bar-dark"}}
+			{{#with story}}
+				<div class="bar bar-subfooter bar-dark">
+					{{#if currentUser}}
+						{{> storySubmit}}
+					{{else}}	
+						<div class="row row2">
+							<div class="col col2 col-80">
+								<p>  Please log in to add to the story </p>	
+							</div>
+							<div class="col col2 col-20">
+								<div class="col button button-light button-outline" data-ion-modal="_loginModal">
+								 	Login			
+								 </div>
+							</div>
+						</div>
+					{{/if}}
+				</div>
+				<div class="bar bar-footer bar-dark">
+					<button class="vote button button-clear footer-button-left"> 
+						{{> ionIcon icon="thumbsup"}} <sup>{{votes}}</sup>
+					</button>
+					<span class="footerResize">
+						<h4 class="light smallText">A</h4>
+						<h2 class="light bigText"> | A</h2>
+					</span>
+					<button class="share button button-clear footer-button-right">
+						{{> ionIcon icon="share"}}
+					</button>
+				</div>
+			{{/with}}
+		{{/ionFooterBar}}
+	{{/ionView}}
+</template>

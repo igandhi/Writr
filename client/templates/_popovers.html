@@ -1,0 +1,28 @@
+<template name="_storyPopover">
+	{{#ionPopover}}
+	<div class="content">
+		<div class="list">
+			{{#if currentUser}}
+			<div class="item item-icon-left" data-ion-modal="_newStoryModal">
+				{{> ionIcon icon="plus-round"}}
+				New Story
+			</div>
+			{{else}}
+			 <div class="item item-icon-left" data-ion-modal="_loginModal">
+				{{> ionIcon icon="plus-round"}}
+				New Story 
+	         </div>
+			{{/if}}
+			<div class="item item-icon-left sort">
+				{{#if $.Session.equals 'sort' 'createdAt'}}
+					{{> ionIcon icon="thumbsup"}}
+					Sort by votes
+				{{else}}
+					{{> ionIcon icon="ios-clock"}}
+					Sort by date
+				{{/if}}
+			</div>
+		</div>
+	</div>
+	{{/ionPopover}}
+</template>
